@@ -254,85 +254,140 @@ footer {
 }
 
 /* Media Queries للتنسيق المتجاوب */
+
+/* الشاشات الصغيرة - الهواتف (أقل من 768px) */
 @media (max-width: 768px) {
     nav {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: column; /* جعل الشريط الأسود عمودي */
+        align-items: center; /* توسيط العناصر عموديًا */
         padding: 10px;
     }
 
     nav .logo {
-        margin-left: 0;
-        margin-bottom: 10px;
+        margin-bottom: 10px; /* إضافة مسافة أسفل الشعار */
     }
 
     nav .nav-links {
-        flex-direction: column;
-        gap: 10px;
-        margin-right: 0;
+        display: none; /* إخفاء النصوص في الشريط الأسود */
+    }
+
+    .language-switcher {
+        position: absolute;
+        top: 80px; /* وضع شريط اللغات أسفل الشريط الأسود */
+        right: 50%; /* توسيط أفقي */
+        transform: translateX(50%);
+        margin-top: 20px; /* مسافة إضافية من الأعلى */
+    }
+
+    #theme-toggle {
+        position: absolute;
+        top: 140px; /* وضع زر الوضع الليلي أسفل شريط اللغات */
+        right: 50%; /* توسيط أفقي */
+        transform: translateX(50%);
     }
 
     header .hero h1 {
-        font-size: 2rem;
+        font-size: 2rem; /* تصغير حجم العنوان */
     }
 
     header .hero p {
-        font-size: 1rem;
+        font-size: 1rem; /* تصغير النص */
     }
 
     section h2 {
-        font-size: 1.5rem;
+        font-size: 1.5rem; /* تقليل حجم العناوين */
+    }
+
+    .blue-bar-text {
+        display: block; /* عرض النص أسفل الشريط الأسود */
+        margin-top: 160px; /* مسافة بعد الشريط الأسود */
+        text-align: center;
+        font-size: 1rem;
+        color: #333; /* لون النص */
     }
 
     .social-icon {
+        width: 40px
+
+```css
         width: 40px;
-        height: 40px;
+        height: 40px; /* تقليل حجم أيقونات وسائل التواصل */
     }
 
     .cta {
         font-size: 0.9rem;
-        padding: 8px 16px;
+        padding: 8px 16px; /* تصغير الأزرار */
     }
 
     .contact form input,
     .contact form textarea,
     .contact form button {
-        font-size: 0.9rem;
+        font-size: 0.9rem; /* تصغير النصوص داخل الحقول */
     }
 
     .logo-img {
         width: 40px;
-        height: 30px;
+        height: 30px; /* تقليل حجم شعار الموقع */
     }
 
     .language-switcher button {
         font-size: 0.8rem;
-        padding: 4px 8px;
+        padding: 4px 8px; /* تصغير أزرار شريط اللغات */
     }
 
     #theme-toggle {
-        font-size: 20px;
+        font-size: 20px; /* تصغير حجم أيقونة زر الوضع الليلي */
         padding: 8px;
     }
 }
 
+/* الشاشات المتوسطة (769px إلى 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
     header .hero h1 {
-        font-size: 2.2rem;
+        font-size: 2.2rem; /* تقليل حجم العنوان */
     }
 
     header .hero p {
-        font-size: 1.1rem;
+        font-size: 1.1rem; /* تصغير النص */
     }
 
     section h2 {
-        font-size: 1.8rem;
+        font-size: 1.8rem; /* تقليل حجم العناوين */
     }
 
     .social-icon {
         width: 50px;
-        height: 50px;
+        height: 50px; /* تعديل حجم أيقونات التواصل الاجتماعي */
     }
+
+    .cta {
+        font-size: 1rem;
+        padding: 10px 18px; /* ضبط أبعاد الأزرار */
+    }
+
+    .contact form input,
+    .contact form textarea,
+    .contact form button {
+        font-size: 1rem; /* حجم قياسي للحقل */
+    }
+}
+
+/* الشاشات الكبيرة (أكبر من 1024px) */
+@media (min-width: 1025px) {
+    nav {
+        flex-direction: row; /* عرض الشريط الأسود أفقيًا */
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-links {
+        display: flex; /* إظهار روابط الشريط الأسود */
+    }
+
+    .blue-bar-text {
+        display: none; /* إخفاء النص الإضافي في الشاشات الكبيرة */
+    }
+}
 
     .cta {
         font-size: 1rem;
