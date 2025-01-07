@@ -253,6 +253,7 @@ footer {
     margin-top: 40px;
 }
 
+
 /* Media Queries للتنسيق المتجاوب */
 
 /* الشاشات الصغيرة - الهواتف (أقل من 768px) */
@@ -307,9 +308,6 @@ footer {
     }
 
     .social-icon {
-        width: 40px
-
-```css
         width: 40px;
         height: 40px; /* تقليل حجم أيقونات وسائل التواصل */
     }
@@ -388,15 +386,5 @@ footer {
         display: none; /* إخفاء النص الإضافي في الشاشات الكبيرة */
     }
 }
-
-    .cta {
-        font-size: 1rem;
-        padding: 10px 18px;
-    }
-
-    .contact form input,
-    .contact form textarea,
-    .contact form button {
-        font-size: 1rem;
     }
 }
